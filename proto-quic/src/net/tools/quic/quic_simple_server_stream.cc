@@ -90,7 +90,7 @@ void QuicSimpleServerStream::OnDataAvailable() {
       //JS:It means we got an old message, Log it to keep track of how many times this happens
       std::cout << "Received old stream!! " << id() << ", " << LargestStreamId << std::endl;
       std::ofstream logging_old_packets;
-      logging_old_packets.open("/home/lca2/Desktop/Old_Messages.txt", std::ios_base::app);
+      logging_old_packets.open("/home/maki/ephemeral-quic/Old_Messages.txt", std::ios_base::app);
       logging_old_packets << id() << std::endl;
       logging_old_packets.close();
     } else {
@@ -118,7 +118,7 @@ void QuicSimpleServerStream::OnDataAvailable() {
 
       //JS: Write delays to output file, for future analysis
       std::ofstream logging_delay_client;
-      logging_delay_client.open("/home/lca2/Desktop/delay_client_server.txt", std::ios_base::app);
+      logging_delay_client.open("/home/maki/ephemeral-quic/delay_client_server.txt", std::ios_base::app);
       logging_delay_client << packet_number << ": " << delay << std::endl;
       logging_delay_client.close();
 

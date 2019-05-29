@@ -107,23 +107,24 @@ def createNetwork():
 
        # rh.cmd('python ./monitor_qlen_rh.py &')
         rh.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T rh -e \'sudo python ./monitor_queue.py\' &')
-       # ri.cmd('python ./monitor_qlen_ri.py &')
+	   # ri.cmd('python ./monitor_qlen_ri.py &')
         ri.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T ri -e \'sudo python ./monitor_qlen_ri.py\' &')
         #it.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T it -e \'sudo ./tcpserver 6666 > tcp-output-server.txt\' &')
-
+	info( '\n*** Set up in-network routers...\n' )
         #ht.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T ht -e \'sleep 10; sudo ./tcpclient 10.20.0.1 6666 > tcp-output-client.txt\' &')
 
        # iu.cmd('tshark -i iu-eth0 -w server.pcap &')
         iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'sudo tshark -i iu-eth0 -w server.pcap\' &')
        # iu.cmd('./server.sh &')
         iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'sudo ./server.sh > output-server.txt\' &')
-       # iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'python3 udp_server.py | tee udp-output-server.txt\' &')
-       # hu.cmd('tshark -i hu-eth0 -w client.pcap &')
+	   # iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'python3 udp_server.py | tee udp-output-server.txt\' &')
+	info( '\n*** Server started...\n' )
+	   # hu.cmd('tshark -i hu-eth0 -w client.pcap &')
         hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'sudo tshark -i hu-eth0 -w client.pcap\' &')
        # hu.cmd('./client.sh &')
         hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'sleep 5; sudo ./client.sh > output-client.txt\' &')
        # hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'python3 udp_client.py | tee udp-output-client.txt \' &')
-
+	info( '\n*** Client started...\n' )
 
 	it.cmd('ethtool -K it-eth0 tx off sg off tso off') #disable TSO on TCP on defaul TCP sender need to be done on other host if sending large TCP file from other nodes
 
@@ -191,6 +192,7 @@ def createNetwork():
 	# hu.cmd("killall xterm")
 	iu.cmd("killall xterm")
 	# stops the simulation
+	#info('*** Stopping network\n')
 	#net.stop()
 
 
