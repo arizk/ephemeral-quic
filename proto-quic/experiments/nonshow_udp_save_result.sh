@@ -18,6 +18,3 @@ python3 plot_packets_sent_and_dropped_nonshow.py $dirname/queue.txt
 cp udp_client.py $dirname/
 cp udp_server.py $dirname/
 mv *.png $dirname/
-
-
-

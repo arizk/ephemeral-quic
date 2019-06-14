@@ -5,5 +5,5 @@ rm ~/ephemeral-quic/delay_server_client.txt
 rm ~/ephemeral-quic/Old_Messages.txt
 rm *.png
 rm qlen*.txt
-
-
+pkill -f quic
+killall python

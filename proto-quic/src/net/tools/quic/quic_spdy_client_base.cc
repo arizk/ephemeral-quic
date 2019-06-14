@@ -158,7 +158,7 @@ std::unique_ptr<QuicSession> QuicSpdyClientBase::CreateQuicClientSession(
 }
 
 void QuicSpdyClientBase::SendEphemeralMessage(const std::string &message, int deadline_in_microsecond) {
-  /*
+  //*
   long long start_timestamp = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
   // Cancel the last latest stream if still open, to stop retransmitting old ephemeral messages
   if ((latest_ephemeral_stream_ != nullptr) && (!latest_ephemeral_stream_->IsClosed())) {
@@ -166,10 +166,10 @@ void QuicSpdyClientBase::SendEphemeralMessage(const std::string &message, int de
     client_session()->StopRetransmissions(latest_ephemeral_stream_->id());
     latest_ephemeral_stream_->Reset(QUIC_STREAM_CANCELLED);
   }
-  */
+  //*/ (for baseline QUIC, the whole method has to be commented out except the 2 lines below!)
   SpdyHeaderBlock dummy_header;
   SendRequest(dummy_header, message, /*fin=*/true);
-  /*
+  //*
   if (deadline_in_microsecond < 0) {
     return;
   }
@@ -186,7 +186,7 @@ void QuicSpdyClientBase::SendEphemeralMessage(const std::string &message, int de
     client_session()->StopRetransmissions(latest_ephemeral_stream_->id());
     latest_ephemeral_stream_->Reset(QUIC_STREAM_CANCELLED);
   }
-  */
+  //*/
 }
 
 void QuicSpdyClientBase::SendRequest(const SpdyHeaderBlock& headers,

@@ -1,5 +1,6 @@
 # base
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -11,6 +12,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer100-bw1-lo
 # buffer
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer10-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -22,6 +24,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer10-bw1-los
 # loss
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw1-loss1.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -33,6 +36,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer100-bw1-lo
 # RTT
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt10-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -44,6 +48,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt10-buffer100-bw1-l
 
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt20-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -55,6 +60,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt20-buffer100-bw1-l
 # bw
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw0.1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')

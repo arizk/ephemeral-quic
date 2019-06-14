@@ -13,9 +13,9 @@ def createNetwork():
 	#send rate at each link in Mbps
 	bwg = 1#000 #1000 #in Mbps
 	bwbn = 1#000 #1000 #25 #in Mbps
-	loss = 80 #1 #2.5 #10 #1 #in %
+	loss = 10 #1 #2.5 #10 #1 #in %
 	mqs = 100 #0 #1000 #max queue size of interfaces
-	dly = '5ms'#'1ms 0.5ms' #can take all tc qdisc delay distribution formulations
+	dly = '5ms' #0.5ms'#'1ms 0.5ms' #can take all tc qdisc delay distribution formulations
 
 	#create empty network
 	net = Mininet(intf=TCIntf)
@@ -59,7 +59,6 @@ def createNetwork():
 	link_iu_sw2.intf1.config( bw = bwg, max_queue_size = mqs)
 	link_ri_sw2.intf1.config( bw = bwg, max_queue_size = mqs, delay=dly) #delay is set at ri on both interfaces
 
-	# link_rh_ri.intf1.config(  bw = bwg, max_queue_size = 10, loss=loss) #loss is set at rh on its interface to ri only
 	link_rh_ri.intf1.config(  bw = bwg, max_queue_size = mqs, loss=loss) #loss is set at rh on its interface to ri only
 
 	link_ht_sw1.intf2.config( bw = bwbn, max_queue_size = mqs)
@@ -101,29 +100,8 @@ def createNetwork():
 
         rh.cmd('tc qdisc del dev rh-eth1 root')
         rh.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 0.2% 2% 90% 2% limit ' + str(mqs))
-        #rh.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 0.2% 2% 90% 2% limit 10')
-        #rh.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 0.1% 1% 90% 2% limit 1000')
-        #rh.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 0.5% 2% 90% 2% limit 1000')
 
-       # rh.cmd('python ./monitor_qlen_rh.py &')
-        rh.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T rh -e \'sudo python ./monitor_queue.py\' &')
-       # ri.cmd('python ./monitor_qlen_ri.py &')
-        ri.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T ri -e \'sudo python ./monitor_qlen_ri.py\' &')
-        #it.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T it -e \'sudo ./tcpserver 6666 > tcp-output-server.txt\' &')
-
-        #ht.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T ht -e \'sleep 10; sudo ./tcpclient 10.20.0.1 6666 > tcp-output-client.txt\' &')
-
-       # iu.cmd('tshark -i iu-eth0 -w server.pcap &')
-        iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'sudo tshark -i iu-eth0 -w server.pcap\' &')
-       # iu.cmd('./server.sh &')
-       # iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'sudo ./baseline_server.sh > output-server.txt\' &')
-        iu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T iu -e \'python3 udp_server.py > udp-output-server.txt\' &')
-       # hu.cmd('tshark -i hu-eth0 -w client.pcap &')
-        hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'sudo tshark -i hu-eth0 -w client.pcap\' &')
-       # hu.cmd('./client.sh &')
-        # hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'sleep 5; sudo ./baseline_client.sh > output-client.txt\' &')
-        hu.cmd('xterm -xrm \'XTerm.vt100.allowTitleOps: false\' -T hu -e \'python3 udp_client.py > udp-output-client.txt \' &')
-
+	start_nodes(rh, ri, iu, hu) #experiment actions
 
 	it.cmd('ethtool -K it-eth0 tx off sg off tso off') #disable TSO on TCP on defaul TCP sender need to be done on other host if sending large TCP file from other nodes
 
@@ -140,59 +118,28 @@ def createNetwork():
 
         # makeTerms([iu, hu, rh, ri], "host")
 
-	#hu.cmd("bash /home/lca2/Desktop/server.sh")
 	time.sleep(1)
-
-	#iu.cmd("bash /home/lca2/Desktop/client-network.sh")
-	time.sleep(1)
-
-	"""it.cmd("python3 tcpserver.py &> "+logFolder+"it.txt &")
-	time.sleep(1)
-	ht.cmd("python3 tcpclient.py --ip 10.20.0.1 --port 4242 -s "+logFolder+"ht- -t "+str(timeout)+" &> "+logFolder+"ht.txt &")
-
-	#potential second flow in the reverse direction of the first
-
-	#ht.cmd("python3 tcpserver.py --ip 10.10.0.1 --port 4243 &> "+logFolder+"ht2.txt &")
-	#time.sleep(1)
-	#it.cmd("python3 tcpclient.py --ip 10.10.0.1 --port 4243 -s "+logFolder+"it2- -t "+str(timeout)+" &> "+logFolder+"it2.txt &")
-
-	#smart grid data will be transported by TCP, delay will be recorded
-	if method == 'tcp':
-		info(method)
-		iu.cmd("python3 delayReceiver.py --tcp --ip 10.20.0.2 -p 4242 -s "+logFolder+"iu- -t "+str(timeout)+" &> "+logFolder+"iu.txt &")
-		time.sleep(1)
-		hu.cmd("python3 tcpsender.py -t "+str(timeout)+" &> "+logFolder+"hu.txt &")
-
-	#smart grid data will be transported by FRED, delay will be recorded
-	elif method == 'udp':
-		info(method)
-		iu.cmd("python3 delayReceiver.py --ip 10.20.0.2 -p 4242 -s "+logFolder+"iu- -t "+str(timeout)+" &> "+logFolder+"iu.txt &")
-		time.sleep(1)
-		hu.cmd("python3 udpsender.py -s "+logFolder+"hu- -t "+str(timeout)+" &> "+logFolder+"hu.txt &")
-
-	else:
-		info("method unknown")
-		net.stop()
-		return
-
-	#wainting until test end
-	info('\n*** Sleeping\n')
-	for i in range(int(timeout)):
-		time.sleep(60)
-		info("**slept "+str(i+1))"""
 
 	# Enable the mininet> prompt if uncommented
 	info('\n*** Running CLI\n')
 	CLI(net)
 
-	#kill xterms in case some where opened
-	#ht.cmd("killall xterm")
-	#it.cmd("killall xterm")
-	# hu.cmd("killall xterm")
-	iu.cmd("killall xterm")
 	# stops the simulation
-	#net.stop()
+	net.stop()
 
+def start_nodes(delay_router, loss_router, server, client):
+
+ delay_router.cmd('sudo python ./monitor_queue.py &')
+ loss_router.cmd('python ./monitor_qlen_ri.py &')
+ info( '\n*** Set up of in-network routers completed.\n' )
+
+ server.cmd('tshark -i iu-eth0 -w server.pcap &')
+ server.cmd('sudo python3 udp_server.py > udp-output-server.txt &')
+ info( '\n*** UDP Server started...\n' )
+
+ client.cmd('tshark -i hu-eth0 -w client.pcap &')
+ client.cmd('sleep 5; sudo python3 udp_client.py > udp-output-client.txt  &')
+ info( '\n*** UDP Client started...\n' )
 
 if __name__ == '__main__':
 	setLogLevel( 'info' )

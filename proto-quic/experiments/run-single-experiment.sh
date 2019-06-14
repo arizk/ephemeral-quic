@@ -1,18 +1,27 @@
-########################### Ephemeral QUIC ################################
+########################### Single Experiment ################################
+experiment='network-ephemeral-rtt5-buffer10-bw1-loss10'
 # base
 mn --clean
 echo "***** CLEANED UP MININET *****"
 ./clean.sh
-echo "***** REMOVED TEMPORARY FILES FROM PREVIOUS EXPERIMENTS *****"
-nohup python network-ephemeral-rtt5-buffer100-bw1-loss10.py
+echo "***** CLEANED UP FROM PREVIOUS EXPERIMENTS *****"
+start=`date +%s`
+echo "Start time:" $(date) "of experiment" $experiment
+nohup python $experiment.py
 sleep 5
-pid=$(pgrep quic_client)
+chmod +777 nohup.out # for esier handling of the file
+pid=$(pgrep quic_client) #for ephemeral 
+#pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}') #for baseline
 echo $pid
 tail --pid=$pid -f /dev/null
-echo "***** Process ID to identify the end of an experiment *****"
-chmod +777 nohup.out # for esier handling of the file
 sleep 5
+echo "***** EXPERIMENT RUN ENDED *****"
+end=`date +%s`
+runtime=$((end-start))
+printf 'Execution time: %dh:%dm:%ds\n' $(($runtime/3600)) $(($runtime%3600/60)) $(($runtime%60))
 pkill xterm
+pkill python
+pkill -f quic
 mn --clean 
-#./nonshow_save_result.sh ephemeral-rtt5-buffer100-bw1-loss10
-echo "***** RESULTS NOT SAVED *****"
+./nonshow_save_result.sh $experiment
+echo "***** RESULTS SAVED *****"

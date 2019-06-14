@@ -6,6 +6,7 @@
 
 # base
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt5-buffer100-bw1-loss10.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -17,6 +18,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt5-buffer100-bw1-l
 # buffer
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt5-buffer10-bw1-loss10.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -28,6 +30,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt5-buffer10-bw1-lo
 # loss
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt5-buffer100-bw1-loss1.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -39,6 +42,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt5-buffer100-bw1-l
 # RTT
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt10-buffer100-bw1-loss10.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -49,6 +53,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt10-buffer100-bw1-
 
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt20-buffer100-bw1-loss10.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -61,6 +66,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt20-buffer100-bw1-
 # bw
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-ephemeral-rtt5-buffer100-bw0.1-loss10.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -75,6 +81,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh ephemeral-rtt5-buffer100-bw0.1
 # base
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -86,6 +93,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer100-bw1-lo
 # buffer
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer10-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -97,6 +105,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer10-bw1-los
 # loss
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw1-loss1.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -108,6 +117,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt5-buffer100-bw1-lo
 # RTT
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt10-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -119,6 +129,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt10-buffer100-bw1-l
 
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt20-buffer100-bw1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -130,6 +141,7 @@ pkill xterm; mn --clean; ./nonshow_save_result.sh baseline-rtt20-buffer100-bw1-l
 # bw
 sleep 300
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-baseline-rtt5-buffer100-bw0.1-loss10.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')
@@ -164,7 +176,7 @@ mn --clean; ./clean.sh; timeout 4000 python network-udp-rtt5-buffer100-bw0.1-los
 # tcp base
 sleep 300
 mn --clean; ./clean.sh
-echo "START"
+echo "Start time:" $(date)
 nohup python network-tcp-rtt5-buffer100-bw1-loss10.py
 sleep 10
 echo "haha"
@@ -179,7 +191,7 @@ pkill xterm; mn --clean; ./nonshow_tcp_save_result.sh
 # tcp shallow buffer
 sleep 300
 mn --clean; ./clean.sh
-echo "START"
+echo "Start time:" $(date)
 nohup python network-tcp-rtt5-buffer10-bw1-loss10.py
 sleep 10
 echo "haha"
@@ -194,7 +206,7 @@ pkill xterm; mn --clean; ./nonshow_tcp_save_result.sh
 # tcp rtt
 sleep 300
 mn --clean; ./clean.sh
-echo "START"
+echo "Start time:" $(date)
 nohup python network-tcp-rtt10-buffer100-bw1-loss10.py
 sleep 10
 echo "haha"
@@ -207,7 +219,7 @@ pkill xterm; mn --clean; ./nonshow_tcp_save_result.sh
 
 sleep 300
 mn --clean; ./clean.sh
-echo "START"
+echo "Start time:" $(date)
 nohup python network-tcp-rtt20-buffer100-bw1-loss10.py
 sleep 10
 echo "haha"
@@ -223,6 +235,7 @@ pkill xterm; mn --clean; ./nonshow_tcp_save_result.sh
 
 # with Ephemeral QUIC
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-competing-ephemeral-rtt5-buffer100-bw0.1-loss1.py
 sleep 30
 pid=$(pgrep quic_client)
@@ -233,6 +246,7 @@ pkill xterm; mn --clean; ./nonshow_save_result_competing_flows.sh competing-tcp-
 
 # with Baseline QUIC
 mn --clean; ./clean.sh
+echo "Start time:" $(date)
 nohup python network-competing-baseline-rtt5-buffer100-bw0.1-loss1.py
 sleep 30
 pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}')

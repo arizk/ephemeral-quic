@@ -1,5 +1,6 @@
 # Plot throughtput of the TCP application in the experiment with TCP competing flow
-
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import sys

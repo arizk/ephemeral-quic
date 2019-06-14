@@ -1,5 +1,6 @@
 # Example usage: python3 plot_tcp_udp_baseline_ephemeral.py aggregated/base-tcp-delay.txt aggregated/base-udp-delay.txt aggregated/base-baseline-delay.txt aggregated/base-ephemeral-delay.txt
-
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
