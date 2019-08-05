@@ -1,5 +1,5 @@
 ########################### Single Experiment ################################
-experiment='network-ephemeral-rtt5-buffer10-bw1-loss10'
+experiment='network-baseline-rtt5-buffer10-bw1-loss10' #do not forget to change PID!
 # base
 mn --clean
 echo "***** CLEANED UP MININET *****"
@@ -10,8 +10,8 @@ echo "Start time:" $(date) "of experiment" $experiment
 nohup python $experiment.py
 sleep 5
 chmod +777 nohup.out # for esier handling of the file
-pid=$(pgrep quic_client) #for ephemeral 
-#pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}') #for baseline
+#pid=$(pgrep quic_client) #for ephemeral 
+pid=$(ps -ef | grep baseline_quic_client  | grep -v xterm | grep -v grep | awk '{print $2}') #for baseline
 echo $pid
 tail --pid=$pid -f /dev/null
 sleep 5

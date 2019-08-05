@@ -100,7 +100,7 @@ def createNetwork():
 
         rh.cmd('tc qdisc del dev rh-eth1 root')
 
-	start_nodes(rh, ri, iu, hu) #experiment actions
+	start_nodes(rh, ri, iu, hu, mqs) #experiment actions
 
 	it.cmd('ethtool -K it-eth0 tx off sg off tso off') #disable TSO on TCP on defaul TCP sender need to be done on other host if sending large TCP file from other nodes
 
@@ -124,12 +124,12 @@ def createNetwork():
 	CLI(net)
 
 	# stops the simulation
-	#net.stop()
+	net.stop()
 
-def start_nodes(delay_router, loss_router, server, client):
+def start_nodes(delay_router, loss_router, server, client, mqs):
 
- delay_router.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 11.11% 10% 100% 0% limit ' + str(mqs))
- #move-to-burstmode (p) of 11.11%, move-to-gapmode (r) of 10%, drop-in-burstmode (1-h) of 100% and drop-in-gapmode (1-k) of 0%
+ delay_router.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 1.11% 10% 100% 0% limit ' + str(mqs))
+ #move-to-burstmode (p) of 1.11%, move-to-gapmode (r) of 10%, drop-in-burstmode (1-h) of 100% and drop-in-gapmode (1-k) of 0%
 
  delay_router.cmd('sudo python ./monitor_queue.py &')
  loss_router.cmd('python ./monitor_qlen_ri.py &')

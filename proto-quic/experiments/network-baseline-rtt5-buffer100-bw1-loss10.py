@@ -126,8 +126,9 @@ def createNetwork():
 def start_nodes(delay_router, loss_router, server, client, mqs):
 
  delay_router.cmd('tc qdisc del dev rh-eth1 root')
- delay_router.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 11.11% 10% 100% 0% limit ' + str(mqs))
- #move-to-burstmode (p) of 11.11%, move-to-gapmode (r) of 10%, drop-in-burstmode (1-h) of 100% and drop-in-gapmode (1-k) of 0%
+ delay_router.cmd('tc qdisc add dev rh-eth1 root netem loss gemodel 1.11% 10% 100% 0% limit ' + str(mqs))
+ #move-to-burstmode (p) of 1.11%, move-to-gapmode (r) of 10%, drop-in-burstmode (1-h) of 100% and drop-in-gapmode (1-k) of 0%
+ 
  delay_router.cmd('sudo python ./monitor_queue.py &')
  loss_router.cmd('python ./monitor_qlen_ri.py &')
  info( '\n*** Set up of in-network routers completed.\n' )
