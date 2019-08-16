@@ -54,12 +54,15 @@ OR use WinSCP to push new files to server
 	3.2 Run the client:
 		./out/Default/quic_client --host=127.0.0.1 --port=6121 https://www.example.org/
 	
-4. Run Experiments
-	4.0 update PATH problems (correct paths on local msi notebook yet)
-		4.0.1 update .../experiments/server.sh (4x file paths)
-		4.0.2 update .../experiments/client.sh (1x file path)
-	4.1 cd ../experiments
-	4.2 sudo ./run-experiments.sh
+4. Run Experiments (in /.../ephemeral-quic/proto-quic/experiments/)
+	4.0 update PATHs (/home/.../.../ephemeral-quic/)
+		4.0.1 update File server.sh (4x file paths)
+		4.0.2 update File client.sh (1x file path)
+	4.1 Compile the C++-Files for an executable)
+		4.1.1 sudo g++ -o num_open_streams num_open_streams.cc
+		4.1.2 sudo g++ -std=c++11 -o preprocess_message_receipt preprocess_message_receipt.cc
+		4.1.3 sudo g++ -o delay delay.cc
+	4.3 sudo ./run-single-experiment.sh
 	
 (for installation debugging information, see readme_fixing_ephemeral-quic.md in Masterthesis repo)
 
