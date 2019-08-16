@@ -1,6 +1,5 @@
 ########################### Single Experiment ################################
 experiment='network-mininet' #do not forget to change PID!
-# base
 mn --clean
 echo "***** CLEANED UP MININET *****"
 ./clean.sh

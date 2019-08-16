@@ -24,7 +24,7 @@ mv /home/maki/ephemeral-quic/Old_Messages.txt $dirname
 mv queue.txt $dirname
 #python3 plot_packets_sent_and_dropped_nonshow.py $dirname/queue.txt 
 mv statistics.txt $dirname
-mv *.png $dirname/
+#mv *.png $dirname/
 
 
 
