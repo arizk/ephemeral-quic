@@ -103,7 +103,9 @@ void QuicSession::OnStreamFrame(const QuicStreamFrame& frame) {
 
 //JS: Stop Stream Retransmission after 100 ms
 void QuicSession::StopRetransmissions(QuicStreamId stream_id)
-{connection()->StopRetransmissions(stream_id);}
+{
+  connection()->StopRetransmissions(stream_id);
+}
 
 void QuicSession::OnRstStream(const QuicRstStreamFrame& frame) {
   if (QuicContainsKey(static_stream_map_, frame.stream_id)) {

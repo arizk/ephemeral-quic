@@ -222,7 +222,7 @@ void QuicSimpleServerSession::HandlePromisedPushRequests() {
   }
 }
 
-void QuicSimpleServerSession::OnEphemeralMessageReceived(const std::string &message) {
+void QuicSimpleServerSession::OnEphemeralMessageReceived(const std::string &message) { //TK: Ephemeral API for receiving messages
     //JS: split the message string into packet_number and timestamp
     std::string::size_type pos = message.find(":");
     // A complete client request has more than 100 characters, including "packet_number:timestamp:" and padding characters.
@@ -240,7 +240,7 @@ void QuicSimpleServerSession::OnEphemeralMessageReceived(const std::string &mess
 
       //JS: Write delays to output file, for future analysis
       std::ofstream logging_delay_client;
-      logging_delay_client.open("/home/maki/ephemeral-quic/delay_client_server.txt", std::ios_base::app);
+      logging_delay_client.open("/home/maki/ephemeral-quic/delay_client_server.txt", std::ios_base::app); //TK: attention for hardcoded paths
       logging_delay_client << packet_number << ": " << delay << std::endl;
       logging_delay_client.close();
     } else {

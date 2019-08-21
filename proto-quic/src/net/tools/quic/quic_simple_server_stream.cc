@@ -90,14 +90,14 @@ void QuicSimpleServerStream::OnDataAvailable() {
       //JS:It means we got an old message, Log it to keep track of how many times this happens
       std::cout << "Received old stream!! " << id() << ", " << LargestStreamId << std::endl;
       std::ofstream logging_old_packets;
-      logging_old_packets.open("/home/maki/ephemeral-quic/Old_Messages.txt", std::ios_base::app);
+      logging_old_packets.open("/home/maki/ephemeral-quic/Old_Messages.txt", std::ios_base::app); //TK: attention for hardcoded paths
       logging_old_packets << id() << std::endl;
       logging_old_packets.close();
     } else {
       //JS: update the value of LargestStreamId, because we encountered a stream id that
       //JS: is larger than the largest one seen so far
       LargestStreamId = id();
-//      std::string message(static_cast<char *>(iov.iov_base));
+      //std::string message(static_cast<char *>(iov.iov_base));
       // spdy_session()->OnEphemeralMessageReceived(message);
     }
 
@@ -118,14 +118,14 @@ void QuicSimpleServerStream::OnDataAvailable() {
 
       //JS: Write delays to output file, for future analysis
       std::ofstream logging_delay_client;
-      logging_delay_client.open("/home/maki/ephemeral-quic/delay_client_server.txt", std::ios_base::app);
+      logging_delay_client.open("/home/maki/ephemeral-quic/delay_client_server.txt", std::ios_base::app); //TK: attention for hardcoded paths
       logging_delay_client << packet_number << ": " << delay << std::endl;
       logging_delay_client.close();
 
 
   SpdyHeaderBlock dummy_headers;
   dummy_headers[":status"] = "404";
-//  long long current_timestamp = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+  //long long current_timestamp = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
   std::string body = std::to_string(sending_timestamp) + ":" + std::to_string(current_timestamp); 
   SendHeadersAndBody(std::move(dummy_headers), body);
 

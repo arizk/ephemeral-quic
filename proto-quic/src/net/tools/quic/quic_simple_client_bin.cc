@@ -114,7 +114,7 @@ int32_t FLAGS_initial_mtu = 0;
 static const int kMessageLength = 100;
 static const char kPaddingCharacter = '*';
 static const int kNumberOfEphemeralMessages = 36000;
-static const int kCycleInMicroseconds = 100000;
+static const int kCycleInMicroseconds = 100000; //TK: set parameters for application scenario
 
 class FakeProofVerifier : public ProofVerifier {
  public:
@@ -318,7 +318,7 @@ int main(int argc, char* argv[]) {
   // Make sure to store the response, for later output.
   client.set_store_response(true);
 
-  for (int i = 0; i < kNumberOfEphemeralMessages; i++) {
+  for (int i = 0; i < kNumberOfEphemeralMessages; i++) { //TK: sending the application msgs
     std::string message = GenerateEphemeralMessage(i);
     client.SendEphemeralMessage(message);
     // Wait for 100 ms
