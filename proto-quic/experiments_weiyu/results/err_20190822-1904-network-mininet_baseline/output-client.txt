@@ -1,0 +1,8 @@
+QuicSentPacketManager::SetSendAlgorithm: 1
+CubicBytes constructor called
+MarkForRetransmission 1
+MarkForRetransmission 2
+MarkForRetransmission 3
+MarkForRetransmission 4
+AddNextPendingFrame2
+Stream type: 2

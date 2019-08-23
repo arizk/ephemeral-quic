@@ -1,0 +1,10 @@
+All messages received: 36000, 100%
+Late messages received: 4954, 13.7611%
+Out-of-order messages received: 2982, 8.28333%
+Latest but late: 1972, 5.47778%
+Valid messages received: 31046, 86.2389%
+Mean delay(ms): 3998.45
+Median delay(ms): 2.858
+90-th percentile(ms): 1014473 1014.47
+99-th percentile(ms): 101490439 101490
+Max delay(ms): 136795

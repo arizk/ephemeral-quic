@@ -1,0 +1,5 @@
+QuicSentPacketManager::SetSendAlgorithm: 1
+CubicBytes constructor called
+QuicSimpleServerSession::OnStreamFrame
+AddNextPendingFrame2
+Stream type: 2

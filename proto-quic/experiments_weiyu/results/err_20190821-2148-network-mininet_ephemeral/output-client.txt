@@ -1,0 +1,777 @@
+QuicSentPacketManager::SetSendAlgorithm: 1
+CubicBytes constructor called
+MarkForRetransmission 1
+Connected to 10.20.0.2:443
+GetNumOpenOutgoingStreams:0
+STREAM ID:5
+MarkForRetransmission 4
+MarkForRetransmission 6
+num_active_requests: 1
+Cancelling stream 5
+Cancel retransmissions for stream 5
+DELETED FRAME 0x2edb1c3cc80
+AddNextPendingFrame1
+RST_STREAM_FRAME5  100
+CLOSED STREAM 5
+GetNumOpenOutgoingStreams:1
+STREAM ID:7
+MarkForRetransmission 7
+num_active_requests: 1
+Cancelling stream 7
+Cancel retransmissions for stream 7
+DELETED FRAME 0x2edb1d667a0
+AddNextPendingFrame1
+RST_STREAM_FRAME7  100
+CLOSED STREAM 7
+GetNumOpenOutgoingStreams:2
+STREAM ID:9
+num_active_requests: 1
+Cancelling stream 9
+Cancel retransmissions for stream 9
+DELETED FRAME 0x2edb1dd02c0
+AddNextPendingFrame1
+RST_STREAM_FRAME9  100
+CLOSED STREAM 9
+GetNumOpenOutgoingStreams:3
+STREAM ID:11
+num_active_requests: 1
+Cancelling stream 11
+Cancel retransmissions for stream 11
+DELETED FRAME 0x2edb1d8f320
+AddNextPendingFrame1
+RST_STREAM_FRAME11  100
+CLOSED STREAM 11
+GetNumOpenOutgoingStreams:4
+STREAM ID:13
+num_active_requests: 1
+Cancelling stream 13
+Cancel retransmissions for stream 13
+DELETED FRAME 0x2edb1c42bc0
+AddNextPendingFrame1
+RST_STREAM_FRAME13  100
+CLOSED STREAM 13
+GetNumOpenOutgoingStreams:5
+STREAM ID:15
+num_active_requests: 1
+Cancelling stream 15
+Cancel retransmissions for stream 15
+DELETED FRAME 0x2edb1d66c80
+AddNextPendingFrame1
+RST_STREAM_FRAME15  100
+CLOSED STREAM 15
+GetNumOpenOutgoingStreams:6
+STREAM ID:17
+num_active_requests: 1
+Cancelling stream 17
+Cancel retransmissions for stream 17
+DELETED FRAME 0x2edb1d8f320
+AddNextPendingFrame1
+RST_STREAM_FRAME17  100
+CLOSED STREAM 17
+GetNumOpenOutgoingStreams:7
+STREAM ID:19
+num_active_requests: 1
+Cancelling stream 19
+Cancel retransmissions for stream 19
+DELETED FRAME 0x2edb1d2c080
+AddNextPendingFrame1
+RST_STREAM_FRAME19  100
+CLOSED STREAM 19
+GetNumOpenOutgoingStreams:8
+STREAM ID:21
+num_active_requests: 1
+Cancelling stream 21
+Cancel retransmissions for stream 21
+DELETED FRAME 0x2edb1d90440
+AddNextPendingFrame1
+RST_STREAM_FRAME21  100
+CLOSED STREAM 21
+GetNumOpenOutgoingStreams:9
+STREAM ID:23
+num_active_requests: 1
+Cancelling stream 23
+Cancel retransmissions for stream 23
+DELETED FRAME 0x2edb1d8fe60
+AddNextPendingFrame1
+RST_STREAM_FRAME23  100
+CLOSED STREAM 23
+GetNumOpenOutgoingStreams:10
+STREAM ID:25
+num_active_requests: 1
+Cancelling stream 25
+Cancel retransmissions for stream 25
+DELETED FRAME 0x2edb1d8f680
+AddNextPendingFrame1
+RST_STREAM_FRAME25  100
+CLOSED STREAM 25
+GetNumOpenOutgoingStreams:11
+STREAM ID:27
+num_active_requests: 1
+Cancelling stream 27
+Cancel retransmissions for stream 27
+DELETED FRAME 0x2edb1d67ce0
+AddNextPendingFrame1
+RST_STREAM_FRAME27  100
+CLOSED STREAM 27
+GetNumOpenOutgoingStreams:12
+STREAM ID:29
+num_active_requests: 1
+Cancelling stream 29
+Cancel retransmissions for stream 29
+DELETED FRAME 0x2edb1d667a0
+AddNextPendingFrame1
+RST_STREAM_FRAME29  100
+CLOSED STREAM 29
+GetNumOpenOutgoingStreams:13
+STREAM ID:31
+num_active_requests: 1
+Cancelling stream 31
+Cancel retransmissions for stream 31
+DELETED FRAME 0x2edb1dcfe60
+AddNextPendingFrame1
+RST_STREAM_FRAME31  100
+CLOSED STREAM 31
+GetNumOpenOutgoingStreams:14
+STREAM ID:33
+num_active_requests: 1
+Cancelling stream 33
+Cancel retransmissions for stream 33
+DELETED FRAME 0x2edb1d90560
+AddNextPendingFrame1
+RST_STREAM_FRAME33  100
+CLOSED STREAM 33
+GetNumOpenOutgoingStreams:15
+STREAM ID:35
+num_active_requests: 1
+Cancelling stream 35
+Cancel retransmissions for stream 35
+DELETED FRAME 0x2edb1d8fec0
+AddNextPendingFrame1
+RST_STREAM_FRAME35  100
+CLOSED STREAM 35
+GetNumOpenOutgoingStreams:16
+STREAM ID:37
+num_active_requests: 1
+Cancelling stream 37
+Cancel retransmissions for stream 37
+DELETED FRAME 0x2edb1d655c0
+AddNextPendingFrame1
+RST_STREAM_FRAME37  100
+CLOSED STREAM 37
+GetNumOpenOutgoingStreams:17
+STREAM ID:39
+num_active_requests: 1
+Cancelling stream 39
+Cancel retransmissions for stream 39
+DELETED FRAME 0x2edb1dcc800
+AddNextPendingFrame1
+RST_STREAM_FRAME39  100
+CLOSED STREAM 39
+GetNumOpenOutgoingStreams:18
+STREAM ID:41
+num_active_requests: 1
+Cancelling stream 41
+Cancel retransmissions for stream 41
+DELETED FRAME 0x2edb1d65440
+AddNextPendingFrame1
+RST_STREAM_FRAME41  100
+CLOSED STREAM 41
+GetNumOpenOutgoingStreams:19
+STREAM ID:43
+num_active_requests: 1
+Cancelling stream 43
+Cancel retransmissions for stream 43
+DELETED FRAME 0x2edb1d2dda0
+AddNextPendingFrame1
+RST_STREAM_FRAME43  100
+CLOSED STREAM 43
+GetNumOpenOutgoingStreams:20
+STREAM ID:45
+num_active_requests: 1
+Cancelling stream 45
+Cancel retransmissions for stream 45
+DELETED FRAME 0x2edb1c3c860
+AddNextPendingFrame1
+RST_STREAM_FRAME45  100
+CLOSED STREAM 45
+GetNumOpenOutgoingStreams:21
+STREAM ID:47
+num_active_requests: 1
+Cancelling stream 47
+Cancel retransmissions for stream 47
+DELETED FRAME 0x2edb1dcabc0
+AddNextPendingFrame1
+RST_STREAM_FRAME47  100
+CLOSED STREAM 47
+GetNumOpenOutgoingStreams:22
+STREAM ID:49
+num_active_requests: 1
+Cancelling stream 49
+Cancel retransmissions for stream 49
+DELETED FRAME 0x2edb1c3e800
+AddNextPendingFrame1
+RST_STREAM_FRAME49  100
+CLOSED STREAM 49
+GetNumOpenOutgoingStreams:23
+STREAM ID:51
+num_active_requests: 1
+Cancelling stream 51
+Cancel retransmissions for stream 51
+DELETED FRAME 0x2edb1bde020
+AddNextPendingFrame1
+RST_STREAM_FRAME51  100
+CLOSED STREAM 51
+GetNumOpenOutgoingStreams:24
+STREAM ID:53
+num_active_requests: 1
+Cancelling stream 53
+Cancel retransmissions for stream 53
+DELETED FRAME 0x2edb1bdff80
+AddNextPendingFrame1
+RST_STREAM_FRAME53  100
+CLOSED STREAM 53
+GetNumOpenOutgoingStreams:25
+STREAM ID:55
+num_active_requests: 1
+Cancelling stream 55
+Cancel retransmissions for stream 55
+DELETED FRAME 0x2edb1dcfaa0
+AddNextPendingFrame1
+RST_STREAM_FRAME55  100
+CLOSED STREAM 55
+GetNumOpenOutgoingStreams:26
+STREAM ID:57
+num_active_requests: 1
+Cancelling stream 57
+Cancel retransmissions for stream 57
+DELETED FRAME 0x2edb1d431a0
+AddNextPendingFrame1
+RST_STREAM_FRAME57  100
+CLOSED STREAM 57
+GetNumOpenOutgoingStreams:27
+STREAM ID:59
+num_active_requests: 1
+Cancelling stream 59
+Cancel retransmissions for stream 59
+DELETED FRAME 0x2edb1be0080
+AddNextPendingFrame1
+RST_STREAM_FRAME59  100
+CLOSED STREAM 59
+GetNumOpenOutgoingStreams:28
+STREAM ID:61
+num_active_requests: 1
+Cancelling stream 61
+Cancel retransmissions for stream 61
+DELETED FRAME 0x2edb1d2c500
+AddNextPendingFrame1
+RST_STREAM_FRAME61  100
+CLOSED STREAM 61
+GetNumOpenOutgoingStreams:29
+STREAM ID:63
+num_active_requests: 1
+Cancelling stream 63
+Cancel retransmissions for stream 63
+DELETED FRAME 0x2edb1dcdce0
+AddNextPendingFrame1
+RST_STREAM_FRAME63  100
+CLOSED STREAM 63
+GetNumOpenOutgoingStreams:30
+STREAM ID:65
+num_active_requests: 1
+Cancelling stream 65
+Cancel retransmissions for stream 65
+DELETED FRAME 0x2edb1c41440
+AddNextPendingFrame1
+RST_STREAM_FRAME65  100
+CLOSED STREAM 65
+GetNumOpenOutgoingStreams:31
+STREAM ID:67
+num_active_requests: 1
+Cancelling stream 67
+Cancel retransmissions for stream 67
+DELETED FRAME 0x2edb1d2c260
+AddNextPendingFrame1
+RST_STREAM_FRAME67  100
+CLOSED STREAM 67
+GetNumOpenOutgoingStreams:32
+STREAM ID:69
+num_active_requests: 1
+Cancelling stream 69
+Cancel retransmissions for stream 69
+DELETED FRAME 0x2edb1c3cf20
+AddNextPendingFrame1
+RST_STREAM_FRAME69  100
+CLOSED STREAM 69
+GetNumOpenOutgoingStreams:33
+STREAM ID:71
+num_active_requests: 1
+Cancelling stream 71
+Cancel retransmissions for stream 71
+DELETED FRAME 0x2edb1d6b740
+AddNextPendingFrame1
+RST_STREAM_FRAME71  100
+CLOSED STREAM 71
+GetNumOpenOutgoingStreams:34
+STREAM ID:73
+num_active_requests: 1
+Cancelling stream 73
+Cancel retransmissions for stream 73
+DELETED FRAME 0x2edb1c3e980
+AddNextPendingFrame1
+RST_STREAM_FRAME73  100
+CLOSED STREAM 73
+GetNumOpenOutgoingStreams:35
+STREAM ID:75
+num_active_requests: 1
+Cancelling stream 75
+Cancel retransmissions for stream 75
+DELETED FRAME 0x2edb1caff20
+AddNextPendingFrame1
+RST_STREAM_FRAME75  100
+CLOSED STREAM 75
+GetNumOpenOutgoingStreams:36
+STREAM ID:77
+num_active_requests: 1
+Cancelling stream 77
+Cancel retransmissions for stream 77
+DELETED FRAME 0x2edb1dcdbc0
+AddNextPendingFrame1
+RST_STREAM_FRAME77  100
+CLOSED STREAM 77
+GetNumOpenOutgoingStreams:37
+STREAM ID:79
+num_active_requests: 1
+Cancelling stream 79
+Cancel retransmissions for stream 79
+DELETED FRAME 0x2edb1dc4bc0
+AddNextPendingFrame1
+RST_STREAM_FRAME79  100
+CLOSED STREAM 79
+GetNumOpenOutgoingStreams:38
+STREAM ID:81
+num_active_requests: 1
+Cancelling stream 81
+Cancel retransmissions for stream 81
+DELETED FRAME 0x2edb1baec80
+AddNextPendingFrame1
+RST_STREAM_FRAME81  100
+CLOSED STREAM 81
+GetNumOpenOutgoingStreams:39
+STREAM ID:83
+num_active_requests: 1
+Cancelling stream 83
+Cancel retransmissions for stream 83
+DELETED FRAME 0x2edb1caf620
+AddNextPendingFrame1
+RST_STREAM_FRAME83  100
+CLOSED STREAM 83
+GetNumOpenOutgoingStreams:40
+STREAM ID:85
+num_active_requests: 1
+Cancelling stream 85
+Cancel retransmissions for stream 85
+DELETED FRAME 0x2edb1c2ef20
+AddNextPendingFrame1
+RST_STREAM_FRAME85  100
+CLOSED STREAM 85
+GetNumOpenOutgoingStreams:41
+STREAM ID:87
+num_active_requests: 1
+Cancelling stream 87
+Cancel retransmissions for stream 87
+DELETED FRAME 0x2edb1d6b8c0
+AddNextPendingFrame1
+RST_STREAM_FRAME87  100
+CLOSED STREAM 87
+GetNumOpenOutgoingStreams:42
+STREAM ID:89
+num_active_requests: 1
+Cancelling stream 89
+Cancel retransmissions for stream 89
+DELETED FRAME 0x2edb1ca9620
+AddNextPendingFrame1
+RST_STREAM_FRAME89  100
+CLOSED STREAM 89
+GetNumOpenOutgoingStreams:43
+STREAM ID:91
+num_active_requests: 1
+Cancelling stream 91
+Cancel retransmissions for stream 91
+DELETED FRAME 0x2edb1c40020
+AddNextPendingFrame1
+RST_STREAM_FRAME91  100
+CLOSED STREAM 91
+GetNumOpenOutgoingStreams:44
+STREAM ID:93
+num_active_requests: 1
+Cancelling stream 93
+Cancel retransmissions for stream 93
+DELETED FRAME 0x2edb1d6c980
+AddNextPendingFrame1
+RST_STREAM_FRAME93  100
+CLOSED STREAM 93
+GetNumOpenOutgoingStreams:45
+STREAM ID:95
+num_active_requests: 1
+Cancelling stream 95
+Cancel retransmissions for stream 95
+DELETED FRAME 0x2edb1d69080
+AddNextPendingFrame1
+RST_STREAM_FRAME95  100
+CLOSED STREAM 95
+GetNumOpenOutgoingStreams:46
+STREAM ID:97
+num_active_requests: 1
+Cancelling stream 97
+Cancel retransmissions for stream 97
+DELETED FRAME 0x2edb1bae5c0
+AddNextPendingFrame1
+RST_STREAM_FRAME97  100
+CLOSED STREAM 97
+GetNumOpenOutgoingStreams:47
+STREAM ID:99
+num_active_requests: 1
+Cancelling stream 99
+Cancel retransmissions for stream 99
+DELETED FRAME 0x2edb1dc5aa0
+AddNextPendingFrame1
+RST_STREAM_FRAME99  100
+CLOSED STREAM 99
+GetNumOpenOutgoingStreams:48
+STREAM ID:101
+num_active_requests: 1
+Cancelling stream 101
+Cancel retransmissions for stream 101
+DELETED FRAME 0x2edb1dcb9e0
+AddNextPendingFrame1
+RST_STREAM_FRAME101  100
+CLOSED STREAM 101
+GetNumOpenOutgoingStreams:49
+STREAM ID:103
+num_active_requests: 1
+Cancelling stream 103
+Cancel retransmissions for stream 103
+DELETED FRAME 0x2edb1d69aa0
+AddNextPendingFrame1
+RST_STREAM_FRAME103  100
+CLOSED STREAM 103
+GetNumOpenOutgoingStreams:50
+STREAM ID:105
+num_active_requests: 1
+Cancelling stream 105
+Cancel retransmissions for stream 105
+DELETED FRAME 0x2edb1dcae00
+AddNextPendingFrame1
+RST_STREAM_FRAME105  100
+CLOSED STREAM 105
+GetNumOpenOutgoingStreams:51
+STREAM ID:107
+num_active_requests: 1
+Cancelling stream 107
+Cancel retransmissions for stream 107
+DELETED FRAME 0x2edb1cae020
+AddNextPendingFrame1
+RST_STREAM_FRAME107  100
+CLOSED STREAM 107
+GetNumOpenOutgoingStreams:52
+STREAM ID:109
+num_active_requests: 1
+Cancelling stream 109
+Cancel retransmissions for stream 109
+DELETED FRAME 0x2edb1d6ada0
+AddNextPendingFrame1
+RST_STREAM_FRAME109  100
+CLOSED STREAM 109
+GetNumOpenOutgoingStreams:53
+STREAM ID:111
+num_active_requests: 1
+Cancelling stream 111
+Cancel retransmissions for stream 111
+DELETED FRAME 0x2edb1d66c80
+AddNextPendingFrame1
+RST_STREAM_FRAME111  100
+CLOSED STREAM 111
+GetNumOpenOutgoingStreams:54
+STREAM ID:113
+num_active_requests: 1
+Cancelling stream 113
+Cancel retransmissions for stream 113
+DELETED FRAME 0x2edb1d6c7a0
+AddNextPendingFrame1
+RST_STREAM_FRAME113  100
+CLOSED STREAM 113
+GetNumOpenOutgoingStreams:55
+STREAM ID:115
+num_active_requests: 1
+Cancelling stream 115
+Cancel retransmissions for stream 115
+DELETED FRAME 0x2edb1c3f380
+AddNextPendingFrame1
+RST_STREAM_FRAME115  100
+CLOSED STREAM 115
+GetNumOpenOutgoingStreams:56
+STREAM ID:117
+num_active_requests: 1
+Cancelling stream 117
+Cancel retransmissions for stream 117
+DELETED FRAME 0x2edb1d6c980
+AddNextPendingFrame1
+RST_STREAM_FRAME117  100
+CLOSED STREAM 117
+GetNumOpenOutgoingStreams:57
+STREAM ID:119
+num_active_requests: 1
+Cancelling stream 119
+Cancel retransmissions for stream 119
+DELETED FRAME 0x2edb1dcac80
+AddNextPendingFrame1
+RST_STREAM_FRAME119  100
+CLOSED STREAM 119
+GetNumOpenOutgoingStreams:58
+STREAM ID:121
+num_active_requests: 1
+Cancelling stream 121
+Cancel retransmissions for stream 121
+DELETED FRAME 0x2edb1d69d40
+AddNextPendingFrame1
+RST_STREAM_FRAME121  100
+CLOSED STREAM 121
+GetNumOpenOutgoingStreams:59
+STREAM ID:123
+num_active_requests: 1
+Cancelling stream 123
+Cancel retransmissions for stream 123
+DELETED FRAME 0x2edb1dce0e0
+AddNextPendingFrame1
+RST_STREAM_FRAME123  100
+CLOSED STREAM 123
+GetNumOpenOutgoingStreams:60
+STREAM ID:125
+num_active_requests: 1
+Cancelling stream 125
+Cancel retransmissions for stream 125
+DELETED FRAME 0x2edb1dc5a40
+AddNextPendingFrame1
+RST_STREAM_FRAME125  100
+CLOSED STREAM 125
+GetNumOpenOutgoingStreams:61
+STREAM ID:127
+num_active_requests: 1
+Cancelling stream 127
+Cancel retransmissions for stream 127
+DELETED FRAME 0x2edb1c45920
+AddNextPendingFrame1
+RST_STREAM_FRAME127  100
+CLOSED STREAM 127
+GetNumOpenOutgoingStreams:62
+STREAM ID:129
+num_active_requests: 1
+Cancelling stream 129
+Cancel retransmissions for stream 129
+DELETED FRAME 0x2edb1d2d500
+AddNextPendingFrame1
+RST_STREAM_FRAME129  100
+CLOSED STREAM 129
+GetNumOpenOutgoingStreams:63
+STREAM ID:131
+num_active_requests: 1
+Cancelling stream 131
+Cancel retransmissions for stream 131
+DELETED FRAME 0x2edb1c4a3e0
+AddNextPendingFrame1
+RST_STREAM_FRAME131  100
+CLOSED STREAM 131
+GetNumOpenOutgoingStreams:64
+STREAM ID:133
+num_active_requests: 1
+Cancelling stream 133
+Cancel retransmissions for stream 133
+DELETED FRAME 0x2edb1be16e0
+AddNextPendingFrame1
+RST_STREAM_FRAME133  100
+CLOSED STREAM 133
+GetNumOpenOutgoingStreams:65
+STREAM ID:135
+num_active_requests: 1
+Cancelling stream 135
+Cancel retransmissions for stream 135
+DELETED FRAME 0x2edb1c3f080
+AddNextPendingFrame1
+RST_STREAM_FRAME135  100
+CLOSED STREAM 135
+GetNumOpenOutgoingStreams:66
+STREAM ID:137
+num_active_requests: 1
+Cancelling stream 137
+Cancel retransmissions for stream 137
+DELETED FRAME 0x2edb1dcf1a0
+AddNextPendingFrame1
+RST_STREAM_FRAME137  100
+CLOSED STREAM 137
+GetNumOpenOutgoingStreams:67
+STREAM ID:139
+num_active_requests: 1
+Cancelling stream 139
+Cancel retransmissions for stream 139
+DELETED FRAME 0x2edb1dd0500
+AddNextPendingFrame1
+RST_STREAM_FRAME139  100
+CLOSED STREAM 139
+GetNumOpenOutgoingStreams:68
+STREAM ID:141
+num_active_requests: 1
+Cancelling stream 141
+Cancel retransmissions for stream 141
+DELETED FRAME 0x2edb1c1cda0
+AddNextPendingFrame1
+RST_STREAM_FRAME141  100
+CLOSED STREAM 141
+GetNumOpenOutgoingStreams:69
+STREAM ID:143
+num_active_requests: 1
+Cancelling stream 143
+Cancel retransmissions for stream 143
+DELETED FRAME 0x2edb1cafda0
+AddNextPendingFrame1
+RST_STREAM_FRAME143  100
+CLOSED STREAM 143
+GetNumOpenOutgoingStreams:70
+STREAM ID:145
+num_active_requests: 1
+Cancelling stream 145
+Cancel retransmissions for stream 145
+DELETED FRAME 0x2edb1bae8c0
+AddNextPendingFrame1
+RST_STREAM_FRAME145  100
+CLOSED STREAM 145
+GetNumOpenOutgoingStreams:71
+STREAM ID:147
+num_active_requests: 1
+Cancelling stream 147
+Cancel retransmissions for stream 147
+DELETED FRAME 0x2edb1be0e00
+AddNextPendingFrame1
+RST_STREAM_FRAME147  100
+CLOSED STREAM 147
+GetNumOpenOutgoingStreams:72
+STREAM ID:149
+num_active_requests: 1
+Cancelling stream 149
+Cancel retransmissions for stream 149
+DELETED FRAME 0x2edb1dc5860
+AddNextPendingFrame1
+RST_STREAM_FRAME149  100
+CLOSED STREAM 149
+GetNumOpenOutgoingStreams:73
+STREAM ID:151
+num_active_requests: 1
+Cancelling stream 151
+Cancel retransmissions for stream 151
+DELETED FRAME 0x2edb1d2c620
+AddNextPendingFrame1
+RST_STREAM_FRAME151  100
+CLOSED STREAM 151
+GetNumOpenOutgoingStreams:74
+STREAM ID:153
+num_active_requests: 1
+Cancelling stream 153
+Cancel retransmissions for stream 153
+DELETED FRAME 0x2edb1c41ec0
+AddNextPendingFrame1
+RST_STREAM_FRAME153  100
+CLOSED STREAM 153
+GetNumOpenOutgoingStreams:75
+STREAM ID:155
+num_active_requests: 1
+Cancelling stream 155
+Cancel retransmissions for stream 155
+DELETED FRAME 0x2edb1c420e0
+AddNextPendingFrame1
+RST_STREAM_FRAME155  100
+CLOSED STREAM 155
+GetNumOpenOutgoingStreams:76
+STREAM ID:157
+num_active_requests: 1
+Cancelling stream 157
+Cancel retransmissions for stream 157
+DELETED FRAME 0x2edb1d6be60
+AddNextPendingFrame1
+RST_STREAM_FRAME157  100
+CLOSED STREAM 157
+GetNumOpenOutgoingStreams:77
+STREAM ID:159
+num_active_requests: 1
+Cancelling stream 159
+Cancel retransmissions for stream 159
+DELETED FRAME 0x2edb1d697a0
+AddNextPendingFrame1
+RST_STREAM_FRAME159  100
+CLOSED STREAM 159
+GetNumOpenOutgoingStreams:78
+STREAM ID:161
+num_active_requests: 1
+Cancelling stream 161
+Cancel retransmissions for stream 161
+DELETED FRAME 0x2edb1d2c9e0
+AddNextPendingFrame1
+RST_STREAM_FRAME161  100
+CLOSED STREAM 161
+GetNumOpenOutgoingStreams:79
+STREAM ID:163
+num_active_requests: 1
+Cancelling stream 163
+Cancel retransmissions for stream 163
+DELETED FRAME 0x2edb1bdf5c0
+AddNextPendingFrame1
+RST_STREAM_FRAME163  100
+CLOSED STREAM 163
+GetNumOpenOutgoingStreams:80
+STREAM ID:165
+num_active_requests: 1
+Cancelling stream 165
+Cancel retransmissions for stream 165
+DELETED FRAME 0x2edb1d691a0
+AddNextPendingFrame1
+RST_STREAM_FRAME165  100
+CLOSED STREAM 165
+GetNumOpenOutgoingStreams:81
+STREAM ID:167
+num_active_requests: 1
+Cancelling stream 167
+Cancel retransmissions for stream 167
+DELETED FRAME 0x2edb1c2e920
+AddNextPendingFrame1
+RST_STREAM_FRAME167  100
+CLOSED STREAM 167
+GetNumOpenOutgoingStreams:82
+STREAM ID:169
+num_active_requests: 1
+Cancelling stream 169
+Cancel retransmissions for stream 169
+DELETED FRAME 0x2edb1c1b7a0
+AddNextPendingFrame1
+RST_STREAM_FRAME169  100
+CLOSED STREAM 169
+GetNumOpenOutgoingStreams:83
+STREAM ID:171
+num_active_requests: 1
+Cancelling stream 171
+Cancel retransmissions for stream 171
+DELETED FRAME 0x2edb1dca740
+AddNextPendingFrame1
+RST_STREAM_FRAME171  100
+CLOSED STREAM 171
+GetNumOpenOutgoingStreams:84
+STREAM ID:173
+num_active_requests: 1
+Cancelling stream 173
+Cancel retransmissions for stream 173
+DELETED FRAME 0x2edb1c1bbc0
+AddNextPendingFrame1
+RST_STREAM_FRAME173  100
+CLOSED STREAM 173
+GetNumOpenOutgoingStreams:85
+STREAM ID:175
+AddNextPendingFrame2
+Stream type: 2
+CLOSED STREAM 175

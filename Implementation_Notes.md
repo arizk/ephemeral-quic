@@ -1,18 +1,21 @@
 ### Good to Know:
-Dos2Unix everything recuresively with: find . -type f -print0 | xargs -0 -n 1 -P 4 dos2unix 
+Dos2Unix everything recuresively with: 
+	find . -type f -print0 | xargs -0 -n 1 -P 4 dos2unix 
 
 Evaluation on Linux server 
-1. Open screen
+1. Open screen session:
 	screen -S nameofscreen
-2. Run script in screen 
+2. Run script in screen:
 	sudo ./runscript.sh
-3. Put screen into the background
+3. Put screen into the background:
 	CTRL + a + d
 4. Log out
  (...)
 5. Log in
-6. Bring Screen to foreground
+6. Bring Screen to foreground:
 	screen -r
+7. Close screen session:
+	CTRL + a + typing ":quit" + enter
 
 
 "TK:" marks the important parts in the code!
